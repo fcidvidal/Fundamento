@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package taller_2;
+package tienda_servicio;
 import java.util.Scanner;
 /**
  *
  * @author Francisco
  */
-public class Taller_2 {
+public class Tienda_servicio {
 
     /**
      * @param args the command line arguments
@@ -17,18 +17,21 @@ public class Taller_2 {
     public static void main(String[] args) {
        Scanner gl = new Scanner(System.in);
        
-       int numCompras, punto=0,montoCompras,codigo, productos, acumulador,puntos;
+       int numCompras, punto=0,montoCompras,codigo, productos, puntos, conf, acumPuntos=0;
        
         System.out.println("Ingrese numero de compras");
         numCompras = gl.nextInt();
         
+      
         for (int i = 0; i < numCompras; i++) {
             
-            System.out.println("Ingrese monto de compra");
-            montoCompras = gl.nextInt();
+            
             System.out.println("Ingrese codigo del producto");
             codigo = gl.nextInt();
+            System.out.println("Ingrese monto de compra");
+            montoCompras = gl.nextInt();
             
+            do {
             if (montoCompras<=10000 && 100<=codigo && codigo<200){
                 punto = montoCompras / 100;
             }
@@ -43,13 +46,30 @@ public class Taller_2 {
             }
             
             puntos = punto * 10;
-            
             System.out.println("cantidad de puntos:  "+puntos);
-       
+          
+            acumPuntos += puntos ;
+            System.out.println("cantidad de putos acumulados:  "+acumPuntos);
+            
+            if (acumPuntos >= montoCompras) {  
+                System.out.println("¿ Quiere pagar con puntos o efectivo? \n\n 1. Puntos \n 2. Efectivo");
+                conf = gl.nextInt();
+               
+                switch(conf){
+                    case 1: 
+                        acumPuntos = acumPuntos - montoCompras;
+                    case 2:
+                        
+                }
+                        
+                System.out.println("Puntos restantes:  "+acumPuntos);
+                 
+            }
+            } while ();
   }
-       
       
      
     }
-    
 }
+    
+
