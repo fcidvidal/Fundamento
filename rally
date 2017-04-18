@@ -1,0 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rally_dakar_2017;
+import java.util.Scanner;
+/**
+ *
+ * @author dci
+ */
+public class Rally_dakar_2017 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner gl = new Scanner(System.in);
+        
+        int tramo, hh, mm, ss,horas, minutos, segundos, hEP1, hEP2, hEP3, mEP1, mEP2, mEP3, sEP1, sEP2, sEP3, compP1, compP2, compP3;
+        
+        System.out.println("Ingrese el tramo");
+        tramo = gl.nextInt();
+        
+        
+        System.out.println("Ingrese las horas de cada competidor");
+        horas = gl.nextInt();
+        
+        switch(horas){
+            case 1: 
+                System.out.println("Ingrese las horas del competidor 1");
+                int horas1 = gl.nextInt();
+            case 2:
+                System.out.println("Ingrese las horas del competidor 2");
+                int horas2 = gl.nextInt();
+            case 3:
+                System.out.println("Ingrese las horas del competidor 3");
+                int horas3 = gl.nextInt();
+            case 4:
+                System.out.println("Ingrese las horas del competidor 4");
+                int horas4 = gl.nextInt();
+            case 5:
+                System.out.println("Ingrese las horas del competidor 5");
+                int horas5 = gl.nextInt();
+            case 6:
+                System.out.println("Ingrese las horas del competidor 6");
+                int horas6 = gl.nextInt();
+            case 7:
+                System.out.println("Ingrese las horas del competidor 7");
+                int horas7 = gl.nextInt();
+            case 8:
+                System.out.println("Ingrese las horas del competidor 8");
+                int horas8 = gl.nextInt();
+            case 9:
+                System.out.println("Ingrese las horas del competidor 9");
+                int horas9 = gl.nextInt();
+            case 10:
+                System.out.println("Ingrese las horas del competidor 10");
+                int horas10 = gl.nextInt();
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+}
