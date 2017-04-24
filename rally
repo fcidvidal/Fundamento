@@ -1,4 +1,5 @@
 /*
+ */*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -17,96 +18,96 @@ public class Rally_dakar_2017 {
     public static void main(String[] args) {
         Scanner gl = new Scanner(System.in);
         
-        int tramo, hh, mm, ss,horas, minutos, segundos, hora1, hora2, hora3, hora4, hora5, hora6, hora7, hora8 ,hora9, hora10,
-                minuto1, minuto2, minuto3, minuto4, minuto5, minuto6, minuto7, minuto8, minuto9, minuto10,
-                segundo1, segundo2, segundo3, segundo4, segundo5, segundo6, segundo7, segundo8, segundo9, segundo10;
-                
-        System.out.println("Ingrese el tramo");
-        tramo = gl.nextInt();
+        int tramo, etapa;
         
+        System.out.println("Ingrese las etapas");
+        etapa = gl.nextInt();
         
-        System.out.println("Presione los número de cada competidor al cúal ingresará los datos \n\n 1. Competidor 1 \n 2. Competidor 2 \n 3. Competidor 3"
-                + "\n 4. Competidor 4 \n 5. Competidor 5 \n 6. Competidor 6 \n 7. Competidor 7 \n 8. Competidor 8 \n 9. Competidor 9 \n 10. Competidor 10 ");
-        
-        horas = gl.nextInt();
-        
-        switch(horas){
-            case 1: 
-                System.out.println("Ingrese las horas del competidor 1");
-                 hora1 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 1");
-                 minuto1 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 1");
-                 segundo1 = gl.nextInt();
-            case 2:
-                System.out.println("Ingrese las horas del competidor 2");
-                 hora2 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 2");
-                 minuto2 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 2");
-                 segundo2 = gl.nextInt();
-            case 3:
-                System.out.println("Ingrese las horas del competidor 3");
-                 hora3 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 3");
-                 minuto3 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 3");
-                 segundo3 = gl.nextInt();
-            case 4:
-                System.out.println("Ingrese las horas del competidor 4");
-                 hora4 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 4");
-                 minuto4 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 4");
-                 segundo4 = gl.nextInt();
-            case 5:
-                System.out.println("Ingrese las horas del competidor 5");
-                 hora5 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 5");
-                 minuto5 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 5");
-                 segundo5 = gl.nextInt();
-            case 6:
-                System.out.println("Ingrese las horas del competidor 6");
-                 hora6 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 6");
-                 minuto6 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 6");
-                 segundo6 = gl.nextInt();
-            case 7:
-                System.out.println("Ingrese las horas del competidor 7");
-                 hora7 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 7");
-                 minuto7 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 7");
-                 segundo7 = gl.nextInt();                 
-            case 8:
-                System.out.println("Ingrese las horas del competidor 8");
-                 hora8 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 8");
-                 minuto8 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 8");
-                 segundo8 = gl.nextInt();
-            case 9:
-                System.out.println("Ingrese las horas del competidor 9");
-                 hora9 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 9");
-                 minuto9 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 9");
-                 segundo9 = gl.nextInt();
-            case 10:
-                System.out.println("Ingrese las horas del competidor 10");
-                 hora10 = gl.nextInt();
-                System.out.println("Ingrese los minutos del competidor 10");
-                 minuto10 = gl.nextInt();
-                System.out.println("Ingrese los segundos del competidor 10");
-                 segundo10 = gl.nextInt();
+        for (int i = 1; i < etapa; i++) {
+            
+            System.out.println("Ingrese número de tramos");
+            tramo = gl.nextInt();
+            
+            //Datos del competidor 1
+            System.out.println("Ingrese las horas del competidor 1");
+            int hComp1 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 1");
+            int mComp1 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 1");
+            int sComp1 = gl.nextInt();
+            
+            //Datos del competidor 2
+            System.out.println("Ingrese las horas del competidor 2");
+            int hComp2 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 2");
+            int mComp2 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 2");
+            int sComp2 = gl.nextInt();
+            
+            //Datos del competidor 3
+            System.out.println("Ingrese las horas del competidor 3");
+            int hComp3 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 3");
+            int mComp3 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 3");
+            int sComp3 = gl.nextInt();
+            
+            //Datos del competidor 4
+            System.out.println("Ingrese las horas del competidor 4");
+            int hComp4 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 4");
+            int mComp4 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 4");
+            int sComp4 = gl.nextInt();
+            
+            //Datos del competidor 5
+            System.out.println("Ingrese las horas del competidor 5");
+            int hComp5 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 5");
+            int mComp5 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 5");
+            int sComp5 = gl.nextInt();
+            
+            //Datos del competidor 6
+            System.out.println("Ingrese las horas del competidor 6");
+            int hComp6 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 6");
+            int mComp6 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 6");
+            int sComp6 = gl.nextInt();
+            
+            //Datos del competidor 7
+            System.out.println("Ingrese las horas del competidor 7");
+            int hComp7 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 7");
+            int mComp7 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 7");
+            int sComp7 = gl.nextInt();
+            
+            //Datos del competidor 8
+            System.out.println("Ingrese las horas del competidor 8");
+            int hComp8 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 8");
+            int mComp8 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 8");
+            int sComp8 = gl.nextInt();
+            
+            //Datos del competidor 9
+            System.out.println("Ingrese las horas del competidor 9");
+            int hComp9 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 9");
+            int mComp9 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 9");
+            int sComp9 = gl.nextInt();
+            
+            //Datos del competidor 10
+            System.out.println("Ingrese las horas del competidor 10");
+            int hComp10 = gl.nextInt();
+            System.out.println("Ingrese los minutos del competidor 10");
+            int mComp10 = gl.nextInt();
+            System.out.println("Ingrese los segundos del competidor 10");
+            int sComp10 = gl.nextInt();            
         }
-        
-        
-        
-        
-        
         
         
     }
