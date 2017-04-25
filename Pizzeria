@@ -1,0 +1,124 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pizzería;
+import java.util.Scanner;
+/**
+ *
+ * @author dci
+ */
+public class Pizzería {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner gl = new Scanner(System.in);
+        
+        int total1 = 0, total2 = 0, total3 = 0, acumtipo_pizza1 = 0, acumtipo_pizza2 = 0, acumtipo_pizza3 = 0, cant_ingredientes, cant_basePizza=0, cant_kgJamon=0,cant_kgQueso=0, cant_kgTomate=0, cant_kgCham=0,
+            cant_pizzas= 0, opc,tipo_pizza, costos = 0, cant_basePizza1, n = 0, resp = 0,total = 0;
+        double cant_kgQueso1, cant_kgJamon1, cant_kgTomate1, cant_kgCham1;
+        
+        
+        
+        System.out.println("Marque la tecla 1 para ingresar la cantidad de ingredientes, o 0 para salir del programa"
+                + "\n\n - Bases de Pizza \n - Kgs de Queso \n - Kgs de Jamón"
+                + "\n - Kgs de Tomate \n - Kgs de Champiñones\n");
+        opc = gl.nextInt();
+        
+        switch (opc){
+            case 0:
+                System.out.println("Ha salido del programa");
+                break;
+            case 1: 
+                System.out.println("Ingrese la cantidad de Bases de pizza");
+                cant_basePizza = gl.nextInt();
+            case 2:
+                System.out.println("Ingrese la cantidad de Kgs de Queso");
+                cant_kgQueso = gl.nextInt();
+            case 3:
+                System.out.println("Ingrese la cantidad de Kgs de Jamón");
+                cant_kgJamon = gl.nextInt();
+            case 4: 
+                System.out.println("Ingrese la cantidad de Kgs de Tomate");
+                cant_kgTomate = gl.nextInt();
+            case 5:
+                System.out.println("Ingrese la cantidad de Kgs de Champiñones");
+                cant_kgCham = gl.nextInt();
+        }
+        
+        int precio_basePizza = cant_basePizza * 500;
+        int precio_kgQueso = cant_kgQueso * 5000;
+        int precio_kgJamon = cant_kgJamon * 2500;
+        int precio_kgTomate = cant_kgTomate * 900;
+        int precio_kgCham = cant_kgCham * 3500;
+        costos = precio_basePizza + precio_kgQueso + precio_kgJamon + precio_kgTomate + precio_kgCham;
+        
+       do{
+              
+        System.out.println("Escoga la pizza \n\n 1. Pizza 1 : \n-Queso\n-Tomate\n-Jamón"
+                + "\n \n2. Pizza 2 : \n-Queso\n-Tomate\nChampiñones"
+                + "\n \n3. Pizza 3 : \n-Queso\n-Jamón\n-Champiñones");
+        tipo_pizza = gl.nextInt();
+        
+       
+        
+        System.out.println("¿Cuántas pizzas del tipo "+tipo_pizza+" desea?");
+        n = gl.nextInt();
+        
+        
+      
+        System.out.println("¿Desea otro o el mismo tipo de pizza? Marque cualquier numero(menos el 0), sino marque la tecla 0");
+        resp = gl.nextInt();
+       
+        switch(tipo_pizza){
+            case 1:
+                cant_basePizza1 = cant_basePizza - (1*n);
+                cant_kgQueso1 = cant_kgQueso - (0.1*n);
+                cant_kgTomate1 = cant_kgTomate - (0.2*n);
+                cant_kgJamon1 = cant_kgJamon - (0.1*n);
+                total = total + 2500 * n;
+                total1 = 2500 * n;
+                acumtipo_pizza1 += n;
+                break;
+            case 2:
+                cant_basePizza1 = cant_basePizza - (1*n);
+                cant_kgQueso1 = cant_kgQueso - (0.2*n);
+                cant_kgTomate1 = cant_kgTomate - (0.2*n);
+                cant_kgCham1 = cant_kgCham - (0.1*n);
+                total = total + 3000 * n;
+                acumtipo_pizza2 += n;
+                total2 = 3000 * n;
+                break;
+            case 3:
+                cant_basePizza1 = cant_basePizza - (1*n);
+                cant_kgQueso1 = cant_kgQueso - (0.2*n);
+                cant_kgJamon1 = cant_kgJamon - (0.2*n);
+                cant_kgCham1 = cant_kgCham - (0.2*n);
+                total = total + 3500 * n;
+                acumtipo_pizza3 += n;
+                total3 = 3500 * n;
+                break;       
+               
+        }          }while (!(resp==0));
+
+        n += n;
+        
+        
+        
+              System.out.println("Ventas $ total del día "+total); 
+              System.out.println("Tipo de pizza");
+              System.out.println("Cantidad de pizzas vendidas "+n);
+              System.out.println("La utilidad es "+(total-costos));
+              
+              System.out.println("Cantidad de pizzas 1: " +acumtipo_pizza1 +" Monto: " +total1);
+              System.out.println("Cantidad de pizzas 2: " +acumtipo_pizza2 +" Monto: " +total2);
+              System.out.println("Cantidad de pizzas 3: " +acumtipo_pizza3 +" Monto: " +total3);
+              
+              
+              
+    }
+    
+}
