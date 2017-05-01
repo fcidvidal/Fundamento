@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package formula_1;
+import java.util.Scanner;
+/**
+ *
+ * @author Francisco
+ */
+public class Formula_1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner gl = new Scanner(System.in);
+        int num_comp, num_vueltas, competidores = 0, vuelta = 0, min=0, seg=0, mili=0, menormin=0, menorseg=0, menormili=0;
+        
+        System.out.println(" ** REGISTRO DE LAS CLASIFICATORIAS ** \n\n");
+        
+        System.out.println("Ingrese el número de competidores");
+        num_comp = gl.nextInt();
+        
+        for (int i = 0; i < num_comp; i++) {
+            competidores+= 1;
+            System.out.println("Ingrese el número de vueltas del competidor " +competidores);
+            num_vueltas = gl.nextInt();
+            
+            for (int j = 0; j < num_vueltas; j++) {
+                vuelta += 1;
+                System.out.println("Ingrese el tiempo en minutos de la vuelta " +vuelta);
+                min = gl.nextInt();
+                System.out.println("Ingrese el tiempo en segundos de la vuelta "+vuelta);
+                seg = gl.nextInt();
+                System.out.println("Ingrese el tiempo en milisegundos de la vuelta "+vuelta);
+                mili = gl.nextInt();
+                
+                System.out.println("El competidor "+competidores+" tuvo un tiempo de "+min+":"+seg+":"+mili+" minutos en la vuelta "+vuelta);
+        
+                
+        if (min<=1){
+            min = menormin;
+        }
+        if (seg<=1){
+            seg = menorseg;
+        }
+        if (mili<=1000){
+            mili = menormili;
+        }
+            
+            }
+            
+        }
+        
+        
+        System.out.println("El menor tiempo del competidor "+competidores+" fue de "+menormin+":"+menorseg+":"+menormili);
+    
+}
+}
+    
