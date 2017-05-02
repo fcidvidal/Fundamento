@@ -1,0 +1,140 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package evaluación_1;
+import java.util.Scanner;
+/**
+ *
+ * @author dci
+ */
+public class Evaluación_1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner gl = new Scanner(System.in);
+        int cod, valor_total=0, cant_prod=1, acum=0,s=0, a=0,b=0,c=0,d=0,e=0,f=0,g=0
+                , nombre=0, valor_1=0, valor_2=0,valor_3=0,valor_4=0,valor_5=0,valor_6=0
+                ,valor_7=0;
+        
+        
+        
+        String mar = "martillo";
+        String sierr = "sierra";
+        String tijer = "tijera"; 
+        String atorn = "atornillador";
+        String clav = "clavos";
+        String torn = "tornillos";
+        String yunq = "yunque";
+        
+        do{
+        System.out.println("** CAJA REGISTRADORA LA HERRERÍA DE DON ADRIÁN **\n");
+        System.out.println("Para completar una venta ingrese el código"
+                + ", para finalizar marque 0");
+        
+        
+       
+       do { 
+        
+           System.out.println("\n Ingrese código del producto");
+        cod = gl.nextInt();
+        
+        
+        
+        
+       
+        
+            
+        if (cod!=0){   
+            
+            System.out.println("\n Ingrese la cantidad de productos");
+            cant_prod = gl.nextInt();
+            acum+=cant_prod;
+            
+       
+        switch (cod){
+            case 210:          
+                valor_total = valor_total + (2990*cant_prod);
+                valor_1 += (2990*cant_prod);
+                a += cant_prod;
+                break;
+            case 211:
+                valor_total = valor_total + (3490*cant_prod);
+                valor_2 += (3490*cant_prod);
+                b += cant_prod;
+                break;
+            case 212:
+                valor_total = valor_total + (1990*cant_prod);
+                valor_3 += (1990*cant_prod);
+                c += cant_prod;
+                break;
+            case 213:
+                valor_total = valor_total + (2390*cant_prod);
+                valor_4 += (2390*cant_prod);
+                d += cant_prod;
+                break;
+            case 214:
+                valor_total = valor_total + (490*cant_prod);
+                valor_5 += (490*cant_prod);
+                e += cant_prod;
+                break;
+            case 215: 
+                valor_total = valor_total + (990*cant_prod);
+                valor_6 += (990*cant_prod);
+                f += cant_prod;
+                break;
+            case 216:
+                valor_total = valor_total + (4090*cant_prod);
+                valor_7 += (4090*cant_prod);
+                g += cant_prod;
+                break;
+                
+        }
+        
+        }
+           
+           }while(!(cod==0));
+     
+        
+        
+        
+        
+        System.out.println("***           BOLETA             ***\n \n");
+        System.out.println("Producto " );
+        
+        System.out.println("Total a Pagar: "+valor_total);
+      
+        
+        System.out.println("¿Desea realizar otra compra?");
+        s = gl.nextInt();
+        valor_total=(valor_total-valor_total);
+        
+    }while(s==1);
+        
+        System.out.println("Monto total de dinero acumulado: "+valor_total);
+        System.out.println("Total de ventas registradas en el día: "+acum);
+        
+        
+        System.out.println("Código: 210 "+ "\nNombre: Martillo "+"\nNúmero de ventas: "+a
+                +"\nIngresos totales: "+valor_1);
+        System.out.println("Código: 211 "+ "\nNombre: Sierra "+"\nNúmero de ventas: "+b
+                +"\nIngresos totales: "+valor_2);
+        System.out.println("Código: 212 "+ "\nNombre: Tijeras "+"\nNúmero de ventas: "+c
+                +"\nIngresos totales: "+valor_3);
+        System.out.println("Código: 213 "+ "\nNombre: Atornillador "+"\nNúmero de ventas: "+d
+                +"\nIngresos totales: "+valor_4);
+        System.out.println("Código: 214 "+ "\nNombre: Clavos "+"\nNúmero de ventas: "+e
+                +"\nIngresos totales: "+valor_5);
+        System.out.println("Código: 215 "+ "\nNombre: Tornillos "+"\nNúmero de ventas: "+f
+                +"\nIngresos totales: "+valor_6);
+        System.out.println("Código: 216 "+ "\nNombre: Yunque "+"\nNúmero de ventas: "+g
+                +"\nIngresos totales: "+valor_7);
+        
+        }
+}
+
+    
+
