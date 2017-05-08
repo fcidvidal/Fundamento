@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package test_entrada_08_05;
+import java.util.Scanner;
+/**
+ *
+ * @author dci
+ */
+public class Test_entrada_08_05{
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Scanner gl = new Scanner(System.in);
+        int N;
+        
+       System.out.println("Ingrese total de notas\n");
+        N = gl.nextInt();
+       
+       int numeros[] = new int[N];
+       double promedio=0;
+       int i;
+       int j;
+       double suma = 0;
+       int min=0;
+      
+      
+       
+        for (i = 0; i < N; i++) {
+            System.out.println("Ingrese la nota para la celda nº "+i);
+            numeros[i]=gl.nextInt();
+             
+             
+           System.out.println("\nNota ingresado en la celda "+i+" es: "+numeros[i]+"\n");
+           
+           
+                suma = suma + numeros[i];
+                promedio = (double) suma / N ;
+                
+                
+              min = numeros[0];
+              for (j = 0; j < N; j++) {
+                 if (min > numeros[i]){
+                 min = numeros[i];
+                 }
+              }
+              System.out.println("La suma de las notas son: " +suma);
+               
+               System.out.println("El menor de los número es: "+min);
+
+                 }
+               System.out.println("El promedio de nota es: " +promedio);
+        
+         
+           
+     
+    }
+}
