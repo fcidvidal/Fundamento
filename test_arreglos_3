@@ -1,8 +1,3 @@
-*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package arreglos_3;
 import java.util.Scanner;
 /**
@@ -16,13 +11,13 @@ public class Arreglos_3 {
      */
     public static void main(String[] args) {
        Scanner gl = new Scanner(System.in);
-    int nota, alumno, i, j;
+    int nota, alumno, i=0, j=0;
     
-    float prom=0, suma = 0, sumanotas=0;
-    int max, min;
+    float prom=0, suma = 0;
+    int max,max1,min1,min;
     
     
-        System.out.println("Ingrese la cantidadd de alumnos");
+        System.out.println("Ingrese la cantidad de alumnos");
         alumno = gl.nextInt();
         
         System.out.println("Ingrese la cantidad de notas");
@@ -39,7 +34,7 @@ public class Arreglos_3 {
     }
     
     for(i=0; i<alumno; i++){
-        System.out.println("Las notas del alumno "+(i+1));
+        System.out.println("\nLas notas del alumno "+(i+1));
         for(j=0; j<nota; j++){
             System.out.print(Numeros[i][j]+" ");
         }
@@ -60,20 +55,48 @@ public class Arreglos_3 {
              min = Numeros[i][j];
          }
         }
+    
         
         prom = suma / nota;
         
+        System.out.println("\n -----------------------------------");
         System.out.println("El promedio del alumno "+(i+1)+" es: "+prom);
         System.out.println("Sus notas minimas y maximas son: "+min+"-"+max);
-    }
+        System.out.println(" -----------------------------------");
     
     
     
     
-    }
     
+        
+    
+        
+        
+        
+        for (i = 0; i < nota; i++) {
+            System.out.print("\t Nota "+(i+1));
+            
+        } System.out.print("\t Min\t Máx\t Prom"); 
+          System.out.println("");
+        
+        for (i = 0; i < alumno; i++){
+            System.out.print("Alumno "+(i+1)+" | ");
+            for (j = 0; j < nota; j++) {
+                
+                System.out.print(Numeros[i][j]+"\t "); 
+                               
+            }
+            System.out.print(min+"\t ");
+            System.out.print(max+"\t ");
+            System.out.print(prom+"\t ");
+            System.out.println("");
+            
+            
+        }System.out.println("Min      | \nMáx      |\nProm     |");
+        
+    
+        }
+    
+    } 
 }
-
-
-    
-
+ 
