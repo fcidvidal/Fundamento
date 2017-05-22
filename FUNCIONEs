@@ -1,0 +1,82 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package funciones_22_05;
+import java.util.Scanner;
+/**
+ *
+ * @author dci
+ */
+public class Ejercicio_remun {
+    static final int N = 12;
+    public static void main(String[] args){
+        int [] ahorro = new int[N];
+        float prom;
+        float vari;
+        ingresar(ahorro);
+        System.out.println("El mes en que se ingresó el mayor ahorro es " + mayorAbono(ahorro));
+        prom = promedio(ahorro);
+        System.out.println("El promedio de dinero en el cuenta de ahorro para el 2009 es " +prom);
+        vari = varianza(ahorro, prom);
+        System.out.println("La varianza es "+vari);
+        System.out.println("y la desviación varianza es " + desviacion(vari));
+    }
+    public static void ingresar(int[] cuenta){
+        int i;
+        Scanner gl = new Scanner(System.in);
+        for (i = 0; i < 10; i++) {
+            System.out.println("Ingrese abono para el mes " + (i+1));
+            cuenta[i] = gl.nextInt();
+        }
+    }
+    
+    public static int mayorAbono(int[] cuenta){
+        int i;
+        int mayor = cuenta[0];
+        int mes = 0;
+        
+        for (i = 0; i < 10; i++) {
+            if(cuenta[i] > mayor){
+                mayor = cuenta[i];
+                mes = 1;
+                
+            }
+            
+        }
+        return mes;
+    }
+    
+    public static float promedio(int[] cuenta){
+        int i;
+        int suma = 0;
+        float prom;
+        for (i = 0; i < 10; i++) {
+            suma = suma + cuenta[i];
+        }
+        prom = (float) suma / N;
+        return prom;
+        }
+    
+
+    
+    public static float varianza(int[] cuenta, float prom){
+        int i;
+        int suma = 0;
+        float resultado;
+        for (i = 0; i < 10; i++) {
+                suma = suma + (cuenta[i] - (int)prom) * (cuenta[i] - (int)prom);     
+        }
+        resultado = (float) suma / N - 1;
+        return resultado;
+    }
+    
+        
+       public static double desviacion(float vari){
+           return Math.sqrt(vari);
+       } 
+        
+    }
+    
+
