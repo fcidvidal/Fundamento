@@ -1,0 +1,101 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package paau_24_05;
+import java.util.Scanner;
+/**
+ *
+ * @author Francisco
+ */
+public class Ejercicio_2 {
+   
+   
+    public static void main(String[] args){
+        menu();
+        
+       
+        
+        
+        
+    }
+    
+    
+    public static void menu(){
+        Scanner gl = new Scanner(System.in); 
+       
+        int opcmenu;
+        do{
+            System.out.println("Qué desea realizar?");
+            System.out.println(" 1. Suma \n 2. Resta \n 3. División \n 4. Multiplicación \n\n 0. Salir");
+            opcmenu = gl.nextInt();
+            calculadora(opcmenu);
+            
+          
+        }while(opcmenu!=0);
+        
+    }
+    
+    public static void calculadora(int x1){
+         Scanner gl = new Scanner(System.in);
+         int num1, num2;
+       switch (x1){
+           case 1:
+               System.out.println("Elegiste SUMA\n");
+               System.out.println("Ingrese número 1");
+               num1 = gl.nextInt();
+               System.out.println("Ingrese número 2");
+               num2 = gl.nextInt();
+               System.out.println("El resultado es "+suma(num1,num2));
+               break;
+           case 2:
+               System.out.println("Elegiste RESTA\n");
+               System.out.println("Ingrese número 1");
+               num1 = gl.nextInt();
+               System.out.println("Ingrese número 2");
+               num2 = gl.nextInt();
+               System.out.println("El resultado es "+resta(num1,num2));
+               
+               break;
+           case 3:
+               System.out.println("Elegiste DIVISION\n");
+               System.out.println("Ingrese número 1");
+               num1 = gl.nextInt();
+               System.out.println("Ingrese número 2");
+               num2 = gl.nextInt();
+               System.out.println("El resultado es "+division(num1,num2));
+               break;
+           case 4:
+               System.out.println("Elegiste MULTIPLICACION\n");
+               System.out.println("Ingrese número 1");
+               num1 = gl.nextInt();
+               System.out.println("Ingrese número 2");
+               num2 = gl.nextInt();
+               System.out.println("El resultado es "+multiplicacion(num1,num2));
+               break;
+       }
+       
+    } 
+
+
+    public static int suma(int x1, int x2){
+      int suma = x1 + x2;
+      return suma;
+    } 
+    
+    public static int resta(int x1, int x2){
+     int resta = x1 - x2;
+     return resta;
+    }
+    
+    public static float division(int x1, int x2){
+        float division = x1 / x2;
+        return division;
+    }
+    
+    public static int multiplicacion(int x1, int x2){
+        int multiplicacion = x1 * x2;
+        return multiplicacion;
+    }
+}
