@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package paau_24_05;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Francisco
+ */
+public class Funcion_Ejercicio_3 {
+    
+    public static void main(String[] args){
+    Scanner gl = new Scanner(System.in);
+    
+        String palabra = "";
+        System.out.println("Ingrese la palabra");
+        palabra = gl.nextLine();
+        String vocales = "aeiou";
+        contador(palabra, vocales);
+        
+    }
+  
+    
+    public static void contador(String palabra, String vocales){
+        int cont = 0;
+        
+        for (int i = 0; i < vocales.length(); i++) {
+            for (int j = 0; j < palabra.length(); j++) {
+                if (vocales.charAt(i) == palabra.charAt(j)) {
+                    cont++;
+                }
+            }
+        }
+        System.out.println("La palabra contiene "+cont+" vocales");       
+        System.out.println("La palabra contiene "+palabra.length()+" letras");
+    }
+}
