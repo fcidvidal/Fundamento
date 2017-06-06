@@ -1,0 +1,179 @@
+1 . . . 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taller4_ej1;
+import java.util.Scanner;
+/**
+ *
+ * @author dci
+ */
+public class Taller4_ej1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+     
+        Scanner gl = new Scanner(System.in);
+        
+        int num;
+        do{
+        System.out.println("Ingrese número del 1 al 10");
+        num = gl.nextInt();
+        }while(num<1 || num > 10);
+        
+        Contador call = new Contador(num);
+        
+        call.Conta(num);
+
+        
+        }  
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taller4_ej1;
+
+===================================================
+
+
+public class Contador {
+    private int num;
+
+    public Contador(int num) {
+        this.num = num;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+    
+    public void Conta(int num){
+        
+        for (int i = 0; i < this.num; i++) {
+           
+            System.out.println(i+1);
+    } 
+         
+}
+}
+
+2 ........ .. .. .
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taller4_ej2;
+import java.util.Scanner;
+/**
+ *
+ * @author dci
+ */
+public class Taller4_ej2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Scanner gl = new Scanner(System.in);
+     
+        int horas,ventas;
+        
+        
+        System.out.println("Ingrese las horas trabajadas a la semana");
+        horas = gl.nextInt();
+        System.out.println("Ingrese las ventas de la semana");
+        ventas = gl.nextInt();
+        
+        Vendedor call = new Vendedor(horas, ventas);
+        
+        
+     
+        System.out.println("El sueldo semanal es "+call.horasExtra());
+        System.out.println("El sueldo mensual es "+(call.horasExtra()*4));
+        
+        
+    }
+
+    }
+    
+
+==============================================================
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taller4_ej2;
+
+/**
+ *
+ * @author dci
+ */
+public class Vendedor {
+    private int horas;
+    private int ventas;
+
+    public int getHoras() {
+        return horas;
+    }
+
+    public void setHoras(int horas) {
+        this.horas = horas;
+    }
+
+    public int getVentas() {
+        return ventas;
+    }
+
+    public void setVentas(int ventas) {
+        this.ventas = ventas;
+    }
+
+    public Vendedor(int horas, int ventas) {
+        this.horas = horas;
+        this.ventas = ventas;
+    }
+    
+    public double horasExtra(){
+        int horaExtra;
+        int horaExtraTotal=0;
+        double sueldo = 0;
+        if(this.horas > 40){
+            
+            horaExtra = (this.horas - 40) * 3000;
+            horaExtraTotal = horaExtra + 80000;
+        
+        }
+        if(this.horas <= 40){
+            
+            horaExtraTotal = horas * 2000;
+        }
+        if (this.ventas > 300000){
+            sueldo = (ventas * 0.05) + horaExtraTotal;
+            }
+        if (this.ventas > 500000){
+            sueldo = (ventas * 0.1) + horaExtraTotal;
+        }
+        if (this.ventas <= 300000){
+            sueldo = (double) horaExtraTotal;
+        }
+        
+        return sueldo;
+    } 
+   
+    
+}
+
