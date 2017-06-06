@@ -11,3 +11,45 @@
             
         }
     }
+
+2.- public static void main(String[] args) {
+        Scanner gl = new Scanner(System.in);
+     
+        int horasTrab, horaExtra, horaExtraTotal=0, ventas;
+        double sueldo=0;
+        
+        System.out.println("Ingrese las horas trabajadas a la semana");
+        horasTrab = gl.nextInt();
+        System.out.println("Ingrese las ventas de la semana");
+        ventas = gl.nextInt();
+        
+        if(horasTrab > 40){
+            
+            horaExtra = (horasTrab / 40) * 3000;
+            horaExtraTotal = horaExtra + 80000;
+        
+        }
+        if(horasTrab <= 40){
+            
+            horaExtraTotal = 80000;
+        }
+        
+        if (ventas > 300000){
+            sueldo = (ventas * 0.05) + horaExtraTotal;
+            }
+        if (ventas > 500000){
+            sueldo = (ventas * 0.1) + horaExtraTotal;
+        }
+        if (ventas < 300000){
+            sueldo = horaExtraTotal;
+        }
+        System.out.println("El sueldo semanal es "+sueldo);
+        System.out.println("El sueldo mensual es "+(sueldo*4));
+        
+        
+        
+    }
+    
+}
+
+3.- 
