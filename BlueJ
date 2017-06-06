@@ -1,0 +1,13 @@
+1.- public static void main(String[] args) {
+        Scanner gl = new Scanner(System.in);
+        
+        int num;
+        do{
+        System.out.println("Ingrese número del 1 al 10");
+        num = gl.nextInt();
+        }while(num<1 && num > 10);
+        for (int i = 0; i < num; i++) {
+            System.out.println(" "+(i+1));
+            
+        }
+    }
