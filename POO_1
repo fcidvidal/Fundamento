@@ -1,0 +1,76 @@
+1. /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taller4_ej1;
+
+/**
+ *
+ * @author dci
+ */
+public class Taller4_ej1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+        Calculo3 call = new Calculo3(2,3,4);
+        System.out.println(call.suma());
+        System.out.println(call.multi());
+    }
+    
+}
+
+
+2. /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taller4_ej1;
+
+
+public class Calculo3 {
+    private int num1;
+    private int num2;
+    private int num3;
+
+    public Calculo3(int num1, int num2, int num3) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+    }
+
+    public void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
+    public void setNum3(int num3) {
+        this.num3 = num3;
+    }
+
+    public int getNum1() {
+        return num1;
+    }
+
+    public int getNum2() {
+        return num2;
+    }
+
+    public int getNum3() {
+        return num3;
+    }
+    
+    public int suma(){
+        return this.num1+this.num2+this.num3;
+    }
+    public int multi(){
+        return this.num1*this.num2*this.num3;
+    }
+}
