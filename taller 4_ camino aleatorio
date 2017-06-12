@@ -1,0 +1,214 @@
+1 main
+package taller4_ej4;
+
+
+public class Taller4_ej4 {
+    
+
+   
+    public static void main(String[] args) {
+        
+    int moneda=0;
+    
+    
+    Camino random = new Camino(moneda);
+    
+    
+    random.camino1();
+    
+    random.camino3();
+    random.camino4();
+    random.camino5();
+           
+}
+}
+
+2
+package taller4_ej4;
+
+public class Camino {
+    private int moneda = 0;
+    String ra = "OH, me quedo en el edificio RA";
+    String r1 = "OH, me quedo en el edificio R1";
+    String d = "OH, me quedo en el edificio D";
+    String e = "OH, me quedo en el edificio E";
+    String dis = "OH, me quedo en el edificio DCI";
+    
+    public Camino(int moneda) {
+        this.moneda = moneda;
+    }
+
+    public int getMoneda() {
+        return moneda;
+    }
+
+    public void setMoneda(int moneda) {
+        this.moneda = moneda;
+    }
+    
+    public String getRa() {
+        return ra;
+    }
+
+    public void setRa(String ra) {
+        this.ra = ra;
+    }
+
+    public String getR1() {
+        return r1;
+    }
+
+    public void setR1(String r1) {
+        this.r1 = r1;
+    }
+
+    public String getD() {
+        return d;
+    }
+
+    public void setD(String d) {
+        this.d = d;
+    }
+
+    public String getE() {
+        return e;
+    }
+
+    public void setE(String e) {
+        this.e = e;
+    }
+
+    public String getDis() {
+        return dis;
+    }
+
+    public void setDis(String dis) {
+        this.dis = dis;
+    }
+    
+ 
+   
+   
+    
+    public void camino1(){
+        Camino random2 = new Camino(moneda);
+     do {    
+        System.out.println("\nVoy a tirar la moneda");
+        moneda = (int)((Math.random()*2)+1);
+        
+         System.out.println("la moneda es"+moneda+"\n");
+        
+        if (moneda == 1){
+            System.out.println(ra);
+        }else if (moneda == 2){
+           System.out.println("Voy a avanzar al siguiente edificio");
+           
+           
+           random2.camino2();
+           
+        }
+     }while (moneda == 1);
+    }
+        
+   
+       
+    public void camino3(){
+     do {  
+        System.out.println("Voy a tirar la moneda");
+        moneda = (int)((Math.random()*2)+1);
+        
+         if (moneda == 1){
+            System.out.println(d);
+        }
+        if (moneda == 2){
+            System.out.println("Voy a avanzar al siguiente edificio");
+        }
+     }while (moneda == 1);
+    }
+        
+    
+    public void camino4(){
+     do {  
+        System.out.println("Voy a tirar la moneda");
+        moneda = (int)((Math.random()*2)+1);
+        
+         if (moneda == 1){
+            System.out.println(e);
+        }
+        if (moneda == 2){
+            System.out.println("Voy a avanzar al siguiente edificio");
+        } 
+     }while (moneda == 1);
+    }
+    
+    public void camino5(){
+     do {  
+        System.out.println("Voy a tirar la moneda");
+        moneda = (int)((Math.random()*2)+1);
+        
+         if (moneda == 1){
+            System.out.println(dis);
+        }
+        if (moneda == 2){
+            System.out.println("Voy a avanzar al siguiente edificio");
+        }
+     } while (moneda == 1);
+    }
+    
+    }
+    
+ 
+ 3  
+ package taller4_ej4;
+
+public class camino2 {
+  public int moneda = 0;
+  String r1 = "OH, me quedo en el edificio R1";
+
+    public camino2(int moneda) {
+        this.moneda = moneda;
+    }
+
+    public int getMoneda() {
+        return moneda;
+    }
+
+    public void setMoneda(int moneda) {
+        this.moneda = moneda;
+    }
+
+    public String getR1() {
+        return r1;
+    }
+
+    public void setR1(String r1) {
+        this.r1 = r1;
+    }
+   
+  
+    
+    
+    
+     public void camino2 extends camino(){
+     do {  
+        System.out.println("\nVoy a tirar la moneda");
+        moneda = (int)((Math.random()*2)+1);
+        
+         if (moneda == 1){
+            System.out.println(r1);
+        }
+        if (moneda == 2){
+            System.out.println("Voy a avanzar al siguiente edificio");
+        }
+     }while (moneda == 1);
+    }
+    
+    
+}
+
+        
+        
+        
+
+   
+
