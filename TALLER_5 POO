@@ -1,0 +1,199 @@
+package taller5_ej1;
+
+
+public class Taller5_ej1 {
+
+    
+    public static void main(String[] args) {
+        
+       int a=1, b =2, c = 3, cont=0;
+       int[] correctas = new int[10];
+        
+        Nota notas = new Nota(correctas, cont, a, b, c);
+        notas.preguntas();
+        notas.resultado();
+        }
+    
+}
+
+
+==================================================================
+
+package taller5_ej1;
+
+import java.util.Scanner;
+
+public class Nota {
+    public int [] correctas;
+    public int contador;
+    public int altA;
+    public int altB;
+    public int altC;
+
+    public Nota(int[] correctas, int contador, int altA, int altB, int altC) {
+        this.correctas = correctas;
+        this.contador = contador;
+        this.altA = altA;
+        this.altB = altB;
+        this.altC = altC;
+    }
+
+    public int[] getCorrectas() {
+        return correctas;
+    }
+
+    public void setCorrectas(int[] correctas) {
+        this.correctas = correctas;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+
+    public int getAltA() {
+        return altA;
+    }
+
+    public void setAltA(int altA) {
+        this.altA = altA;
+    }
+
+    public int getAltB() {
+        return altB;
+    }
+
+    public void setAltB(int altB) {
+        this.altB = altB;
+    }
+
+    public int getAltC() {
+        return altC;
+    }
+
+    public void setAltC(int altC) {
+        this.altC = altC;
+    }
+    
+    
+    
+    public void preguntas(){
+        Scanner gl = new Scanner(System.in);
+        int i, resp = 0;
+        System.out.println("Bienvenido al Programa");
+        for (i = 0; i < 10; i++) {
+            
+            System.out.println("Ingrese la alternativa de la pregunta "+(i+1));
+            System.out.println("1. A \n2. B\n3. C");
+            resp = gl.nextInt();
+            
+         
+           
+            correctas[i] = (int) (Math.random() * 3)+1;
+           
+        
+        
+        if(correctas[i] == resp){
+            
+            contador = contador + 1;
+            
+        }
+        contador = contador * 10;
+        }
+        }
+        
+    
+    
+    public void resultado(){
+        double puntaje = 0, notaFinal = 0;
+        puntaje = contador;
+        
+        if (puntaje >= 60){
+            notaFinal = (puntaje * 0.06) + 1;  
+        }
+        if (puntaje < 60){
+            notaFinal = (puntaje * 0.05) + 1;
+        }
+        System.out.println("La nota final es "+notaFinal);
+        
+        System.out.println("=================");
+        System.out.println("Ha salido del programa..");
+    }
+     
+    
+    
+}
+
+
+
+
+
+
+Diferencia entre Objeto y Clase.
+La clase es la definición abstracta de un objeto, también se definen en esta las funciones que se usarán en el main con relación al objeto.
+
+El objeto es algo que se utiliza o que juega un papel. Tiene atributos, los cuales hay funciones en las clases que actúan sobre ellas.
+EJEMPLO:
+public class modelo //clase modelo 
+{ 
+
+public int metodo1() //metodo
+{ 
+} 
+
+}
+
+//se crea el objeto objmodelo en el main
+
+modelo objmodelo = new modelo (); 
+
+//luego se llama al metodo en relación al objeto creado
+
+objmodelo .metodo1();   
+
+
+
+
+
+
+
+
+
+
+
+La herencia hace referencia a que se mantienen los atributos y métodos de la clase primaria, pero a nuevas subclases, facilita la creación de nuevos objetos a partir de otros existentes, los reutiliza.
+EJEMPLO 
+public class Mamifero{
+	private int patas;
+	private String nombre;
+public Mamifero(String nombre, int patas){
+	this.nombre = nombre;
+	this.patas = patas;
+  	}
+}
+public class Perro extends Mamifero {
+	public Perro(String nombre){
+	super(nombre, 4);
+	}
+}
+public class Gato extends Mamifero {
+	public Gato(String nombre){
+	super(nombre, 4);
+	}
+} 
+ 
+
+
+
+
+
+
+
+(Fijar var1 a 0 ) =  (int var1 = 0;)
+(número al azar entre 1 y 5) = ((Math.random()*5)+1);
+(decir hola) = (System.out.println(“hola”);)
+Repetir 10 veces = for (int i = 0; i < 10; i++) ;
+Si algo = if ();
