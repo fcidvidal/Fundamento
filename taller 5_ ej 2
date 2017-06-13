@@ -1,0 +1,95 @@
+package taller5_ej2;
+
+public class Taller5_ej2 {
+
+    
+    public static void main(String[] args) {
+       int vehi1=0, vehi2=0, vehi3=0, vehi4=0;
+       
+       Vehiculos vehi = new Vehiculos(vehi1, vehi2, vehi3, vehi4);
+       
+       
+       
+       
+       
+       
+       
+       vehi.Velocidad();
+        
+        
+
+
+
+
+    }
+    
+}
+
+========================================================================
+
+package taller5_ej2;
+
+public class Vehiculos {
+    private int vehi1;
+    private int vehi2;
+    private int vehi3;
+    private int vehi4;
+
+    public Vehiculos(int vehi1, int vehi2, int vehi3, int vehi4) {
+        this.vehi1 = vehi1;
+        this.vehi2 = vehi2;
+        this.vehi3 = vehi3;
+        this.vehi4 = vehi4;
+    }
+
+    public int getVehi1() {
+        return vehi1;
+    }
+
+    public void setVehi1(int vehi1) {
+        this.vehi1 = vehi1;
+    }
+
+    public int getVehi2() {
+        return vehi2;
+    }
+
+    public void setVehi2(int vehi2) {
+        this.vehi2 = vehi2;
+    }
+
+    public int getVehi3() {
+        return vehi3;
+    }
+
+    public void setVehi3(int vehi3) {
+        this.vehi3 = vehi3;
+    }
+
+    public int getVehi4() {
+        return vehi4;
+    }
+
+    public void setVehi4(int vehi4) {
+        this.vehi4 = vehi4;
+    }
+    
+    
+    public void Velocidad(){
+        
+        this.vehi1 =(int)((Math.random()*5)+1);
+        System.out.println(vehi1);
+        this.vehi2 =(int)((Math.random()*5)+1);
+        System.out.println(vehi2);
+        this.vehi3 =(int)((Math.random()*5)+1);
+        System.out.println(vehi3);
+        this.vehi4 =(int)((Math.random()*5)+1);
+        System.out.println(vehi4);
+        
+    }
+    
+    
+    
+    
+    
+}
