@@ -14,11 +14,7 @@ public class Taller4_ej4 {
     Camino random = new Camino(moneda);
     
     
-    random.camino1();
-    
-    random.camino3();
-    random.camino4();
-    random.camino5();
+    random.camino();
            
 }
 }
@@ -86,13 +82,10 @@ public class Camino {
         this.dis = dis;
     }
     
- 
-   
-   
-    
-    public void camino1(){
+     
+    public void camino(){
         Camino random2 = new Camino(moneda);
-     do {    
+     
         System.out.println("\nVoy a tirar la moneda");
         moneda = (int)((Math.random()*2)+1);
         
@@ -102,112 +95,43 @@ public class Camino {
             System.out.println(ra);
         }else if (moneda == 2){
            System.out.println("Voy a avanzar al siguiente edificio");
+           moneda = (int)((Math.random()*2)+1);
            
-           
-           random2.camino2();
-           
-        }
-     }while (moneda == 1);
-    }
-        
-   
-       
-    public void camino3(){
-     do {  
-        System.out.println("Voy a tirar la moneda");
-        moneda = (int)((Math.random()*2)+1);
-        
-         if (moneda == 1){
-            System.out.println(d);
-        }
-        if (moneda == 2){
-            System.out.println("Voy a avanzar al siguiente edificio");
-        }
-     }while (moneda == 1);
-    }
-        
-    
-    public void camino4(){
-     do {  
-        System.out.println("Voy a tirar la moneda");
-        moneda = (int)((Math.random()*2)+1);
-        
-         if (moneda == 1){
-            System.out.println(e);
-        }
-        if (moneda == 2){
-            System.out.println("Voy a avanzar al siguiente edificio");
-        } 
-     }while (moneda == 1);
-    }
-    
-    public void camino5(){
-     do {  
-        System.out.println("Voy a tirar la moneda");
-        moneda = (int)((Math.random()*2)+1);
-        
-         if (moneda == 1){
-            System.out.println(dis);
-        }
-        if (moneda == 2){
-            System.out.println("Voy a avanzar al siguiente edificio");
-        }
-     } while (moneda == 1);
-    }
-    
-    }
-    
- 
- 3  
- package taller4_ej4;
-
-public class camino2 {
-  public int moneda = 0;
-  String r1 = "OH, me quedo en el edificio R1";
-
-    public camino2(int moneda) {
-        this.moneda = moneda;
-    }
-
-    public int getMoneda() {
-        return moneda;
-    }
-
-    public void setMoneda(int moneda) {
-        this.moneda = moneda;
-    }
-
-    public String getR1() {
-        return r1;
-    }
-
-    public void setR1(String r1) {
-        this.r1 = r1;
-    }
-   
-  
-    
-    
-    
-     public void camino2 extends camino(){
-     do {  
-        System.out.println("\nVoy a tirar la moneda");
-        moneda = (int)((Math.random()*2)+1);
-        
-         if (moneda == 1){
+        if (moneda == 1){
             System.out.println(r1);
+        }else if (moneda == 2){
+           System.out.println("Voy a avanzar al siguiente edificio");
+           moneda = (int)((Math.random()*2)+1);
+           
+        if (moneda == 1){
+            System.out.println(d);
+        }else if (moneda == 2){
+           System.out.println("Voy a avanzar al siguiente edificio");
+           moneda = (int)((Math.random()*2)+1);
+           
+        if (moneda == 1){
+            System.out.println(e);
+        }else if (moneda == 2){
+           System.out.println("Voy a avanzar al siguiente edificio");
+           moneda = (int)((Math.random()*2)+1);
+           
+        if (moneda == 1){
+            System.out.println(dis);
+        }else if (moneda == 2){
+           System.out.println("Voy a avanzar al siguiente edificio");
+           moneda = (int)((Math.random()*2)+1);
+           
+           
+           
         }
-        if (moneda == 2){
-            System.out.println("Voy a avanzar al siguiente edificio");
-        }
-     }while (moneda == 1);
+     }
     }
-    
-    
+        
+        }
 }
+     }
+     }
 
-        
-        
         
 
    
