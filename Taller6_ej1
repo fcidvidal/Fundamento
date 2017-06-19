@@ -1,0 +1,117 @@
+package taller6_ej1;
+
+public class Taller6_ej1 {
+
+    public static void main(String[] args) {
+       
+        
+        
+        
+        
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package taller6_ej1;
+import java.util.Date;
+import java.util.Random;
+
+public class Tarjeta {
+    
+    private int[][] tarjeta;
+    private int alto;
+    private int ancho;
+    private String nombre;
+    
+    public Tarjeta(String nombre, int a, int b){
+        this.nombre = nombre;
+        this.alto = a;
+        this.ancho = b;
+        int[] lista = crearLista();
+        this.tarjeta = crearTarjeta(lista);
+    }
+    
+    public int[][] getTarjeta(){
+        return this.tarjeta;
+    }
+    
+    public String getNombre(){
+        return nombre;
+    }
+    
+    public void setTarjeta(int[][] tarjeta){
+        this.tarjeta = tarjeta;
+    }
+    
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public int[] crearLista(){
+        Date semilla = new Date();
+        Random rnum = new Random(semilla.getTime());
+        int largo = this.ancho*this.alto;
+        int[] lista = new int[largo];
+        
+        for (int i = 0; i < largo; i++) {
+            lista[i] = (int)(100+ rnum.nextInt(900));
+        }
+        return lista;
+    }
+    
+    public int[] ordenarLista(int[] lista){
+            
+        for (int i = 0; i < lista.length-1; i++) {
+            for (int j = 0; j < lista.length-1; j++) {
+                if(lista[j] > lista[j+1]){
+                    int aux = lista[j+1];
+                    lista[j+1] = lista[j];
+                    lista[j] = aux;
+                }
+                
+            }
+            
+        }
+        return lista;
+    }
+    
+    public int crearTarjeta(int[] lista){
+        int[][] matriz = new int[this.alto][this.ancho];
+       
+        int contador = 0;
+        for (int i = 0; i < this.alto; i++) {
+            for (int j = 0; j < this.ancho; j++) {
+               
+                matriz[i][j] = lista[contador];
+                contador ++;
+                
+            }
+            
+        }
+      return lista[contador];
+    }
+    
+    
+    
+    
+    
+    
+}
