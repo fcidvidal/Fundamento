@@ -1,19 +1,44 @@
 package taller6_ej1;
+import java.util.Scanner;
 
 public class Taller6_ej1 {
 
     public static void main(String[] args) {
        
+     
         
         
         
         
         
     }
-    
+       static int entero(){
+            Scanner gl = new Scanner(System.in);
+            int i = 0;
+            try{
+                return gl.nextInt();
+            }catch (Exception e){
+                System.out.println("Ingresa un número entero valido...");
+                return -1;
+            }
+        }
+       
+       
+       public static int contrasena(){
+           Scanner gl = new Scanner(System.in);
+           int i = 0;
+           try{
+               i = gl.nextInt();
+           }catch (Exception e){
+               System.out.println("Ingresa una contraseña de 4 digitos valida...");
+               i=0;
+           }
+           if(i<=999 || i>=10000){
+               System.out.println("Ingresa una contraseña de 4 digitos valida...");
+           }
+           return i;
+       }
 }
-
-
 
 
 
@@ -48,6 +73,7 @@ public class Tarjeta {
         int[] lista = crearLista();
         this.tarjeta = crearTarjeta(lista);
     }
+
     
     public int[][] getTarjeta(){
         return this.tarjeta;
@@ -109,9 +135,106 @@ public class Tarjeta {
       return lista[contador];
     }
     
+    public void MostrarTarjeta(){
+        int[][] matriz = new int[this.alto][this.ancho];
+        
+        for (int i = 0; i < this.alto; i++) {
+            for (int j = 0; j < this.ancho; j++) {
+                System.out.println("");
+                
+            }
+            
+        }
+    }
+    
     
     
     
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package taller6_ej1;
+
+
+public class Persona {
+    private String nombre;
+    private int sueldo;
+    private Tarjeta tarjeta;
+    private int contraseña;   
+
+
+public Persona(String nombre, int sueldo, int contraseña){
+    this.nombre = nombre;
+    this.sueldo = sueldo;
+    this.contraseña = contraseña;
+    System.out.println("persona creada...");
+    this.tarjeta = new Tarjeta(this.nombre, 5, 10);
+    this.tarjeta.mostrarTarjeta(tarjeta.getTarjeta());
+}
+
+public String getNombre(){
+    return nombre;
+}
+
+public int getSueldo(){
+    return this.sueldo;
+}
+
+public Tarjeta getTarjeta(){
+    return this.tarjeta;
+}
+
+public int getContraseña(){
+    return contraseña;
+}
+
+public void setNombre(String nombre){
+    this.nombre = nombre;
+}
+
+public void setSueldo(int sueldo){
+    this.sueldo = sueldo;
+}
+
+public void setContraseña(int contraseña){
+    this.contraseña = contraseña;
+}
+
+
+
+
+
+}
+
+
