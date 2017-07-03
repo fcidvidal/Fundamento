@@ -1,0 +1,159 @@
+
+package taller_8;
+
+import java.io.*;
+
+
+public class Taller_8 {
+
+    public static void main(String[] args) {
+       Archivo archivo = new Archivo();
+       archivo.contarLineas();
+       archivo.contarPalabras();
+       archivo.contarCaracter();
+    }
+        
+}
+
+     
+
+
+
+
+*****************************************************************************************************
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package taller_8;
+
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+/**
+ *
+ * @author omar
+ */
+public class Archivo {
+
+    String ruta = "/home/dci/Escritorio/Taller_8/src/taller_8/ejemplo";
+    String text = "";
+    Path file = Paths.get(ruta);
+
+    public void contarLineas() {
+
+        try {
+
+            BufferedReader br = new BufferedReader(new FileReader(ruta));
+
+            String linea;
+            int i, cont = 0;
+
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
+                for (i = 0; i < linea.length(); i++) {
+                    if (i == 0) {
+                        if (linea.charAt(i) != ' ') {
+                            cont++;
+                        } else {
+                            if (linea.charAt(i - 1) == ' ') {
+                                if (linea.charAt(i) != ' ') {
+                                    cont++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            System.out.println("\nEl archivo contiene .txt " + cont + " líneas.");
+
+        } catch (IOException a) {
+            System.out.println(a);
+        }
+
+    }
+
+    public void contarPalabras() {
+
+        File archivo = null;
+        try {
+            archivo = new File("/home/dci/Escritorio/Taller_8/src/taller_8/ejemplo");
+            String linea;
+            FileReader fr = new FileReader(archivo);
+            BufferedReader br = new BufferedReader(fr);
+            int i, j, cont = 0;
+            while ((linea = br.readLine()) != null) {
+                for (i = 0; i < linea.length(); i++) {
+                    if (i == 0) {
+                        if (linea.charAt(i) != ' ') {
+                            cont++;
+                        }
+                    } else {
+                        if (linea.charAt(i - 1) == ' ') {
+                            if (linea.charAt(i) != ' ') {
+                                cont++;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            System.out.println("El archivo .txt contiene " + cont + " palabras");
+
+            fr.close();
+        } catch (IOException a) {
+            System.out.println(a);
+        }
+    }
+
+    public void contarCaracter() {
+        File archivo = null;
+        try {
+            archivo = new File("/home/dci/Escritorio/Taller_8/src/taller_8/ejemplo");
+            String linea;
+            FileReader fr = new FileReader(archivo);
+            BufferedReader br = new BufferedReader(fr);
+            
+            
+
+            System.out.println("El archivo .txt contiene " + (archivo.length()) + " caracteres");
+
+            fr.close();
+        } catch (IOException a) {
+            System.out.println(a);
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
