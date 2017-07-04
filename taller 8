@@ -24,11 +24,7 @@ public class Taller_8 {
 
 
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package taller_8;
 
 import java.io.*;
@@ -36,10 +32,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-/**
- *
- * @author omar
- */
+
 public class Archivo {
 
     String ruta = "/home/dci/Escritorio/Taller_8/src/taller_8/ejemplo";
