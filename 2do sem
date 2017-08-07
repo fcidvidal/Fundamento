@@ -1,0 +1,132 @@
+package tablacandidatos;
+
+public class TablaCandidatos {
+
+    public static void main(String[] args) {
+     
+       Grafico grafico = new Grafico();
+       
+       grafico.generarTabla();
+       grafico.mostrarTabla();
+       grafico.calcularTotal();
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+package tablacandidatos;
+
+
+public class Grafico {
+    
+    private int candidatos = 4;
+    private int establecimientos = 15;
+
+    private int[][] votacion = new int[establecimientos][candidatos];
+    
+    public Grafico() {
+        
+    }
+
+    public int getCandidatos() {
+        return candidatos;
+    }
+
+    public void setCandidatos(int candidatos) {
+        this.candidatos = candidatos;
+    }
+
+    public int getEstablecimientos() {
+        return establecimientos;
+    }
+
+    public void setEstablecimientos(int establecimientos) {
+        this.establecimientos = establecimientos;
+    }
+
+    public int[][] getVotacion() {
+        return votacion;
+    }
+
+    public void setVotacion(int[][] votacion) {
+        this.votacion = votacion;
+    }
+        
+    
+
+   
+    
+    
+    
+    public void generarTabla(){
+   
+        
+        
+        for (int i = 0; i < 14; i++) {
+            for (int j = 0; j < 4; j++) {
+                    votacion[i][j] = (int) (Math.random()*5000+0);
+                        
+            }
+        }
+        
+    }
+    
+    public void mostrarTabla(){
+        System.out.print("\t\t\tCand A \tCand B \tCand C \tCand D");
+        for (int i = 0; i < 14; i++) {
+            
+            System.out.println("");
+            System.out.print("Establecimiento "+(i+1)+"\t");
+            
+            
+            for (int j = 0; j < 4; j++) {
+                
+                System.out.print(votacion[i][j]+"\t");
+                
+                
+            }
+            
+        }
+    }
+    
+    
+    public void calcularTotal(){
+        int calculo;
+        System.out.println("");
+        System.out.print("Cand A \tCand B \tCand C \tCand D");
+        for (int i = 0; i < 4; i++) {
+            calculo = 0;
+            for (int j = 0; j < 14; j++) {
+                calculo = calculo + votacion[j][i];
+                
+            
+            
+        
+        
+        }
+               System.out.println("");
+               System.out.println(calculo); 
+        }
+    
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
