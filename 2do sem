@@ -6,9 +6,7 @@ public class TablaCandidatos {
      
        Grafico grafico = new Grafico();
        
-       grafico.generarTabla();
-       grafico.mostrarTabla();
-       grafico.calcularTotal();
+       grafico.menu();
     }
     
 }
@@ -16,16 +14,8 @@ public class TablaCandidatos {
 
 
 
-
-
-
-
-
-
-
-
 package tablacandidatos;
-
+import java.util.Scanner;
 
 public class Grafico {
     
@@ -96,17 +86,22 @@ public class Grafico {
                 
             }
             
-        }
+        }System.out.println("");
+        System.out.println("");
     }
     
     
     public void calcularTotal(){
         int calculo;
-        System.out.println("");
-        System.out.print("Cand A \tCand B \tCand C \tCand D");
+        System.out.println("\n");
+      
+        System.out.print("\tCand A \tCand B \tCand C \tCand D");
+         System.out.print("\nVotos: ");
         for (int i = 0; i < 4; i++) {
             calculo = 0;
+           
             for (int j = 0; j < 14; j++) {
+                
                 calculo = calculo + votacion[j][i];
                 
             
@@ -114,12 +109,161 @@ public class Grafico {
         
         
         }
-               System.out.println("");
-               System.out.println(calculo); 
+             
+               System.out.print("\t"+calculo); 
+             
         }
+        System.out.println("");
     
     }
 
+        public void mostrarMasVotado() {
+        int calculo = 0, mVotado = 0;
+        int[] calculo1 = new int[4];
+
+        for (int i = 0; i < 4; i++) {
+            calculo = 0;
+
+            for (int j = 0; j < 14; j++) {
+
+                calculo = calculo + votacion[j][i];
+
+                calculo1[i] = calculo;
+
+                mVotado = calculo1[0];
+                for (int l = 0; l < 4; l++) {
+                    if (mVotado < calculo1[l]) {
+                        mVotado = calculo1[l];
+
+                    }
+                }
+
+            }
+
+        }
+        if(mVotado == calculo1[0]){
+            System.out.println("El candidato A tuvo la mayoría de votos con un total de: "+mVotado+" votos");
+        }
+        if(mVotado == calculo1[1]){
+            System.out.println("El candidato B tuvo la mayoría de votos con un total de: "+mVotado+" votos");
+        }
+        if(mVotado == calculo1[2]){
+            System.out.println("El candidato C tuvo la mayoría de votos con un total de: "+mVotado+" votos");
+        }
+        if(mVotado == calculo1[3]){
+            System.out.println("El candidato D tuvo la mayoría de votos con un total de: "+mVotado+" votos");
+        }
+
+
+    }
+        
+       
+        public void generarGráfico(){
+            int calculo;
+            double[] calculo1 = new double[4];
+            
+            
+            double[] porc1 = new double[4];
+            for (int i = 0; i < 4; i++) {
+            calculo = 0;
+            
+            
+            
+           
+            for (int j = 0; j < 14; j++) {
+                
+                calculo = calculo + votacion[j][i];
+                
+                calculo1[i] = calculo;
+
+                
+        }
+            
+        
+                porc1[i] = calculo1[i] / 10000;
+               
+             
+            
+        }
+            
+            
+           System.out.print("C A | ");
+            for (int i = 0; i < porc1[0]; i++) {
+                
+                System.out.print("=");                
+            }
+            System.out.print("   | "+(int)calculo1[0]);
+            System.out.println("");
+            
+            
+            System.out.print("C B | ");
+            for (int i = 0; i < porc1[1]; i++) {
+                
+                System.out.print("=");
+                
+            }
+            System.out.print("   | "+(int)calculo1[1]);
+            System.out.println("");
+            
+            System.out.print("C C | ");
+            for (int i = 0; i < porc1[2]; i++) {
+                
+                System.out.print("=");
+            }
+            System.out.print("   | "+(int)calculo1[2]);
+            System.out.println("");
+            
+            System.out.print("C D | ");
+            for (int i = 0; i < porc1[3]; i++) {
+                
+                System.out.print("=");
+            }
+            System.out.print("   | "+((int)calculo1[3]));
+            System.out.println("");
+            
+        }
+        
+        public void menu(){
+            Scanner gl = new Scanner(System.in);
+            int opc;
+            do{
+                
+                System.out.println("------\t MENU \t------");
+                System.out.println("1. Generar tabla\n2. Mostrar tabla\n3. Calcular total\n4. Mostrar más votado\n5. Generar gráfico\n\n0. Salir");
+                opc = gl.nextInt();
+                
+                switch(opc){
+                    case 1:
+                        System.out.println("\nTabla generada..\n");
+                        generarTabla();
+                        break;
+                    case 2:
+                        System.out.println("\nMostrando tabla..\n");
+                        mostrarTabla();
+                        break;
+                    case 3:
+                        System.out.println("\nCalculando el total de votos..");
+                        calcularTotal();
+                        System.out.println("");
+                        break;
+                    case 4:
+                        System.out.println("\nCalculando los votos..\n");
+                        mostrarMasVotado();
+                        System.out.println("");
+                        break;
+                    case 5:
+                        System.out.println("Generando gráfico..");
+                        generarGráfico();
+                        break;
+                    case 0:
+                        System.out.println("Saliendo del programa..");
+                        
+                }
+                
+            
+            
+        }while(!(opc==0));
+            }
     
     
     
