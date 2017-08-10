@@ -62,7 +62,7 @@ public class Grafico {
    
         
         
-        for (int i = 0; i < 14; i++) {
+        for (int i = 0; i < 15; i++) {
             for (int j = 0; j < 4; j++) {
                     votacion[i][j] = (int) (Math.random()*5000+0);
                         
@@ -73,7 +73,7 @@ public class Grafico {
     
     public void mostrarTabla(){
         System.out.print("\t\t\tCand A \tCand B \tCand C \tCand D");
-        for (int i = 0; i < 14; i++) {
+        for (int i = 0; i < 15; i++) {
             
             System.out.println("");
             System.out.print("Establecimiento "+(i+1)+"\t");
@@ -100,7 +100,7 @@ public class Grafico {
         for (int i = 0; i < 4; i++) {
             calculo = 0;
            
-            for (int j = 0; j < 14; j++) {
+            for (int j = 0; j < 15; j++) {
                 
                 calculo = calculo + votacion[j][i];
                 
@@ -124,7 +124,7 @@ public class Grafico {
         for (int i = 0; i < 4; i++) {
             calculo = 0;
 
-            for (int j = 0; j < 14; j++) {
+            for (int j = 0; j < 15; j++) {
 
                 calculo = calculo + votacion[j][i];
 
@@ -170,7 +170,7 @@ public class Grafico {
             
             
            
-            for (int j = 0; j < 14; j++) {
+            for (int j = 0; j < 15; j++) {
                 
                 calculo = calculo + votacion[j][i];
                 
