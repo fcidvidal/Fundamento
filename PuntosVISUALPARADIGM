@@ -1,0 +1,120 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.asociacion;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author dci
+ */
+public class Espacio {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Punto p = new Punto();
+        
+        Punto p1 = new Punto(0,0);
+        Punto p2 = new Punto(5,3);
+        Punto p3 = new Punto(2,-1);
+        
+        ArrayList<Punto> listadoPuntos = new ArrayList();
+        listadoPuntos.add(p1);
+        listadoPuntos.add(p2);
+        listadoPuntos.add(p3);
+        
+        Poligono po = new Poligono(listadoPuntos);
+        
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
+        
+
+    }
+    
+}
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.asociacion;
+
+/**
+ *
+ * @author dci
+ */
+public class Punto {
+    private int ejeX;
+    private int ejeY;
+
+    
+    public Punto(){
+        this.ejeX = 0;
+        this.ejeY = 0;
+    }
+    
+    public Punto(int x, int y) {
+        this.ejeX = x;
+        this.ejeY = y;
+    }
+
+    @Override
+    public String toString() {
+        return "Punto(" + ejeX + "," + ejeY + ')';
+    }
+    
+    
+    public void crearPunto(){
+        System.out.println("Punto creado en la coordenada "+ejeX+","+ejeY);
+    }
+    
+    
+}
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.asociacion;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author dci
+ */
+public class Poligono {
+    
+    private ArrayList<Punto> puntos;
+
+    public Poligono(ArrayList<Punto> nuevoPunto) {
+        
+        this.puntos = new ArrayList<>();
+        if (nuevoPunto.size() > 2) {
+            this.puntos = nuevoPunto;
+        }else{
+            throw new IllegalArgumentException("Parámetro incorrecto");
+        }
+        
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
