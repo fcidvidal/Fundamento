@@ -1,0 +1,124 @@
+
+package modelo;
+
+public enum Formato {
+    MP3,
+    WAV,
+    MIDI,
+    AVI,
+    MOV,
+    MPG;
+    
+    
+}
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package modelo;
+
+/**
+ *
+ * @author dci
+ */
+public enum GeneroMusical {
+    ROCK,
+    POP,
+    FOLK;
+    
+}
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package modelo;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author dci
+ */
+public class ListaMultimedia {
+    private ArrayList<Multimedia> listaMultimedia;
+
+    public ListaMultimedia(ArrayList<Multimedia> listaMultimedia) {
+        this.listaMultimedia = listaMultimedia;
+    }
+    
+    public int obtenerTamagno(){
+        return listaMultimedia.size();
+    }
+
+   
+    
+    
+    
+}
+
+
+
+package modelo;
+
+
+public class Multimedia {
+    private String titulo;
+    private String autor;
+    private double duracion;
+    private Formato formato;
+
+    public Multimedia(){
+        
+    }
+    
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public double getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(double duracion) {
+        this.duracion = duracion;
+    }
+
+    public Formato getFormato() {
+        return formato;
+    }
+
+    public void setFormato(Formato formato) {
+        this.formato = formato;
+    }
+
+    @Override
+    public String toString() {
+        return "Multimedia{" + "titulo=" + titulo + ", autor=" + autor + ", duracion=" + duracion + ", formato=" + formato + '}';
+    }
+    
+    public boolean equals(Multimedia objeto){
+        return 
+        
+    }
+    
+}
